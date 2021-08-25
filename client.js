@@ -11,6 +11,8 @@ const connect = function() {
   
   // here we are sending data to the server
   conn.on('connect', () => {
+    console.log("Successfully connected to game Server");
+    conn.write("Name: SJN");
     process.stdin.on('data', (data) => {
       conn.write(data);
     });
