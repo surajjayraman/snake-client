@@ -12,7 +12,7 @@ const connect = function() {
 
   // here we are sending data to the server
   conn.on('connect', () => {
-    process.stdin.on('Hi There..', (data) => {
+    process.stdin.on('data', (data) => {
       conn.write(data);
     });
   });
