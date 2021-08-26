@@ -13,10 +13,7 @@ const connect = function() {
   conn.on('connect', () => {
     console.log("Successfully connected to game Server");
     conn.write("Name: SJN");
-    //conn.write("Move: up");
-    process.stdin.on('data', (data) => {
-      conn.write(data);
-    });
+    //conn.write("Move: up");    
   });
   
   //handle incoming data
